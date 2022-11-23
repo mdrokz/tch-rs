@@ -44,6 +44,10 @@ impl Sequential {
         self
     }
 
+    pub fn get_layers(&self) -> &Vec<Box<dyn Module>> {
+        &self.layers
+    }
+
     /// Appends a closure after all the current layers.
     pub fn add_fn<F>(self, f: F) -> Self
     where
